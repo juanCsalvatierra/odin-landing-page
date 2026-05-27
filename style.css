@@ -1,0 +1,114 @@
+:root {
+	--color-dark: #1f2937;
+	--secondary-text: #e5e7eb;
+	--primary-text: #F9FAF8;
+	--color-btn: #3882f6;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+}
+
+.button {
+	display: inline-flex;
+	background: var(--color-btn);
+	color: var(--primary-text);
+	border-radius: 0.25rem;
+	padding: 0.5rem 2rem;
+	text-decoration: none;
+	transition: all .02s;
+
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+.wrapper {
+	margin: 0 auto;
+	box-sizing: content-box;
+	width: 100%;
+
+	&.large {
+		max-width: 75rem;
+	}
+
+	&.medium {
+		max-width: 53.75rem;
+	}
+}
+
+header {
+	background: var(--color-dark);
+	color: var(--primary-text);
+	position: sticky;
+	top: 0;
+	padding: 1rem 0;
+
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.logo {
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 2rem;
+	}
+
+	nav ul {
+		display: flex;
+		list-style-type: none;
+		gap: 1.25rem;
+		padding: 0;
+		margin: 0;
+	}
+
+	nav ul a {
+		color: var(--secondary-text);
+		text-decoration: none;
+	}
+}
+
+.hero {
+	background: var(--color-dark);
+	padding: 2.5rem 0;
+
+	.wrapper {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+
+	h1 {
+		font-size: clamp(2rem, 5vw, 3rem);
+		font-weight: 900;
+		color: var(--primary-text);
+	}
+
+	p {
+		color: var(--secondary-text);
+		font-size: 1.125rem;
+		line-height: 1.2;
+	}
+
+	.media img {
+		max-height: 300px;
+		width: 100%;
+		object-fit: cover;
+
+	}
+
+	.button {
+		margin-top: 1rem;
+	}
+
+	@media (min-width: 768px) {
+		padding: 5rem 0;
+
+		.wrapper {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
